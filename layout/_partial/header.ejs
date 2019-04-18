@@ -3,11 +3,6 @@
 <style type="text/css">
     header.intro-header{
     }
-    <% if (config.signature) {%>
-    #signature{
-        background-image: url('<%= config.root + theme["signature-img"] %>');
-    }
-    <%}%>
    .post-heading{
     padding:20px;
     }
@@ -26,7 +21,6 @@
 
 <header id="headerid" class="w3-indigo intro-header" style="position:relative;">
     <!-- Signature -->
-    <div  id="signature" >
 	
         <div class="container">
             <div class=" row" >
@@ -109,7 +103,7 @@
                 </div>
             </div>
         </div>
-    </div>
+  
 </header>
 <% if (theme.ribban_bg) {%>
 <script>
