@@ -35,7 +35,7 @@ Install hexo
 ```shell
 npm install hexo-cli -g
 
-#For more:https://hexo.io/zh-cn/index.html
+#For more:https://hexo.io
 ```
 
 # Theme Usage
@@ -43,12 +43,12 @@ npm install hexo-cli -g
 ## Init
 
 ```bash
-git clone https://github.com/kinggozhang/hexo-theme-sumoon.git ./hexo-theme-sumoon
-cd hexo-theme-sumoon
-npm install
+cd your_blog_dir
+git clone https://github.com/kinggozhang/hexo-theme-ace.git themes/ace
 ```
 
 ## Modify
+Change theme with 'ace'
 Modify `_config.yml` file with your own info.
 Especially the section:
 ### Deployment
