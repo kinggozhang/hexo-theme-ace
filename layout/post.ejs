@@ -48,7 +48,7 @@ layout: layout
 
                 <br>
                 <!--分享-->
-                <% if(config['share']) { %>
+                <% if(theme['share']) { %>
                     <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
                     <!--  css & js -->
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
@@ -72,7 +72,7 @@ layout: layout
                 <% } %>
 
                 <!-- duoshuo Share start -->
-                <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
+                <% if(theme['duoshuo_share'] && theme['duoshuo_username']) { %>
                     <div class="ds-share"
                         style="text-align: right"
                         data-thread-key="<%= page.path %>"
@@ -96,7 +96,7 @@ layout: layout
                 <!-- 多说 Share end-->
 
                 <!-- 多说评论框 start -->
-                <% if(config['duoshuo_username']) { %>
+                <% if(theme['duoshuo_username']) { %>
                     <div class="comment">
                         <div class="ds-thread"
                             data-thread-key="<%= page.path %>"
@@ -108,14 +108,14 @@ layout: layout
                 <!-- 多说评论框 end -->
 
                 <!-- disqus comment start -->
-                <% if(config['disqus_username']) { %>
+                <% if(theme['disqus_username']) { %>
                     <div class="comment">
                         <div id="disqus_thread" class="disqus-thread"></div>
                     </div>
                 <% } %>
                 <!-- disqus comment end -->
 
-                <% if(config['livere_uid']) { %>
+                <% if(theme['livere_uid']) { %>
                     <!-- disqus 评论框 start -->
                     <div class="comment">
                         <div id="lv-container" data-id="city" data-uid="<%= config['livere_uid'] %>"></div>
@@ -135,7 +135,7 @@ layout: layout
                 sidebar-container">
 
                 <!-- Featured Tags -->
-                <% if(config['featured-tags']) { %>
+                <% if(theme['featured-tags']) { %>
                 <section>
                     <!-- no hr -->
                     <h5><a href="<%= config.root %>tags/"><%= __('FEATURED TAGS') %></a></h5>
@@ -148,12 +148,12 @@ layout: layout
                 <% }%>
 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(theme.friends) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
 
-                    <% config.friends.forEach(function(friend){ %>
+                    <% theme.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>
                     <% }); %>
                 </ul>
@@ -163,11 +163,11 @@ layout: layout
     </div>
 </article>
 
-<% if(config['duoshuo_username']) { %>
+<% if(theme['duoshuo_username']) { %>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     // dynamic User by Hux
-    var _user = '<%= config['duoshuo_username'] %>';
+    var _user = '<%= theme['duoshuo_username'] %>';
 
     // duoshuo comment query.
     var duoshuoQuery = {short_name: _user };
@@ -183,11 +183,11 @@ layout: layout
 <!-- 多说公共JS代码 end -->
 <% } %>
 
-<% if(config['disqus_username']) { %>
+<% if(theme['disqus_username']) { %>
 <!-- disqus embedded js code start (one page only need to embed once) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "<%= config['disqus_username'] %>";
+    var disqus_shortname = "<%= theme['disqus_username'] %>";
     var disqus_identifier = "<%= page.permalink %>";
     var disqus_url = "<%= page.permalink %>";
 
@@ -200,7 +200,7 @@ layout: layout
 <!-- disqus embedded js code start end -->
 <% } %>
 
-<% if(config['livere_uid']) { %>
+<% if(theme['livere_uid']) { %>
     <!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
        (function(d, s) {
@@ -219,7 +219,7 @@ layout: layout
     <!-- 来必力City版 公共JS代码 end -->
 <% } %>
 
-<% if(config['anchorjs']) { %>
+<% if(theme['anchorjs']) { %>
 <!-- async load function -->
 <script>
     function async(u, c) {

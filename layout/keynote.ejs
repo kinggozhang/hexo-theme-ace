@@ -60,7 +60,7 @@ layout: layout
 
                 <hr>
 
-                <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
+                <% if(theme['duoshuo_share'] && theme['duoshuo_username']) { %>
                 <!-- 多说 Share start -->
                 </style>
                 <div class="ds-share"
@@ -68,8 +68,8 @@ layout: layout
                     data-thread-key="<%= page.path %>"
                     data-title="<%= page.title %>"
                     data-url="<%= page.permalink %>"
-                    data-images="<%= config.url %><%= config.root %><%= page["header-img"] || config["header-img"] %>"
-                    data-content="<%- truncate(strip_html(page.content), {length: 50, omission: '...'}) %> | <%= config.SEOTitle %> " >
+                    data-images="<%= config.url %><%= config.root %><%= page["header-img"] || theme["header-img"] %>"
+                    data-content="<%- truncate(strip_html(page.content), {length: 50, omission: '...'}) %> | <%= theme.SEOTitle %> " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -98,7 +98,7 @@ layout: layout
                     <% } %>
                 </ul>
 
-                <% if(config['duoshuo_username']) { %>
+                <% if(theme['duoshuo_username']) { %>
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
@@ -110,7 +110,7 @@ layout: layout
                 <!-- 多说评论框 end -->
                 <% } %>
 
-                <% if(config['disqus_username']) { %>
+                <% if(theme['disqus_username']) { %>
                 <!-- disqus 评论框 start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
@@ -128,7 +128,7 @@ layout: layout
                 sidebar-container">
 
                 <!-- Featured Tags -->
-                <% if(config['featured-tags']) { %>
+                <% if(theme['featured-tags']) { %>
                 <section>
                     <!-- no hr -->
                     <h5><a href="<%= config.root %>tags/">FEATURED TAGS</a></h5>
@@ -139,12 +139,12 @@ layout: layout
                 <% }%>
 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(theme.friends) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
 
-                    <% config.friends.forEach(function(friend){ %>
+                    <% theme.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
                     <% }); %>
                 </ul>
@@ -155,11 +155,11 @@ layout: layout
     </div>
 </article>
 
-<% if(config['duoshuo_username']) { %>
+<% if(theme['duoshuo_username']) { %>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     // dynamic User by Hux
-    var _user = '<%= config['duoshuo_username'] %>';
+    var _user = '<%= theme['duoshuo_username'] %>';
 
     // duoshuo comment query.
     var duoshuoQuery = {short_name: _user };
@@ -175,11 +175,11 @@ layout: layout
 <!-- 多说公共JS代码 end -->
 <% } %>
 
-<% if(config['disqus_username']) { %>
+<% if(theme['disqus_username']) { %>
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "<%= config['disqus_username'] %>";
+    var disqus_shortname = "<%= theme['disqus_username'] %>";
     var disqus_identifier = "<%= page.permalink %>";
     var disqus_url = "<%= page.permalink %>";
 
@@ -193,7 +193,7 @@ layout: layout
 <% } %>
 
 
-<% if(config['anchorjs']) { %>
+<% if(theme['anchorjs']) { %>
 <!-- async load function -->
 <script>
     function async(u, c) {

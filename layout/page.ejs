@@ -4,7 +4,7 @@ layout: layout
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <% if(config.sidebar == false) { %>
+        <% if(theme.sidebar == false) { %>
 <!-- NO SIDEBAR -->
     <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
@@ -17,13 +17,13 @@ layout: layout
                 sidebar-container">
 
                 <!-- Featured Tags -->
-                <% if(config['featured-tags']) { %>
+                <% if(theme['featured-tags']) { %>
                 <section>
                     <!-- no hr -->
                     <h5><a href="<%= config.root %>tags/"><%= __('FEATURED TAGS') %></a></h5>
                     <div class="tags">
                         <% site.tags.map(function(tag){  %>
-                            <% if(tag.length > config['featured-condition-size']) { %>
+                            <% if(tag.length > theme['featured-condition-size']) { %>
                             <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
                             <% } %>
                         <% }) %>
@@ -33,12 +33,12 @@ layout: layout
 
 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(theme.friends) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
 
-                    <% config.friends.forEach(function(friend){ %>
+                    <% theme.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
                     <% }); %>
                 </ul>
@@ -64,7 +64,7 @@ layout: layout
                 <% if(page.comments) { %>
                     <hr>
 
-                    <% if(config['duoshuo_username']) { %>
+                    <% if(theme['duoshuo_username']) { %>
                     <!-- 多说评论框 start -->
                     <div class="comment">
                         <div class="ds-thread"
@@ -76,7 +76,7 @@ layout: layout
                     <!-- 多说评论框 end -->
                     <% } %>
 
-                    <% if(config['disqus_username']) { %>
+                    <% if(theme['disqus_username']) { %>
                     <!-- disqus 评论框 start -->
                     <div class="comment">
                         <div id="disqus_thread" class="disqus-thread"></div>
@@ -84,19 +84,19 @@ layout: layout
                     <!-- disqus 评论框 end -->
                     <% } %>
 
-                    <% if(config['livere_uid']) { %>
+                    <% if(theme['livere_uid']) { %>
                         <!-- disqus 评论框 start -->
                         <div class="comment">
-                            <div id="lv-container" data-id="city" data-uid="<%= config['livere_uid'] %>"></div>
+                            <div id="lv-container" data-id="city" data-uid="<%= theme['livere_uid'] %>"></div>
                         </div>
                         <!-- disqus 评论框 end -->
                     <% } %>
 
-                    <% if(config['duoshuo_username']) { %>
+                    <% if(theme['duoshuo_username']) { %>
                     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                         // dynamic User by Hux
-                        var _user = '<%= config['duoshuo_username'] %>';
+                        var _user = '<%= theme['duoshuo_username'] %>';
 
                         // duoshuo comment query.
                         var duoshuoQuery = {short_name: _user };
@@ -112,11 +112,11 @@ layout: layout
                     <!-- 多说公共JS代码 end -->
                     <% } %>
 
-                    <% if(config['disqus_username']) { %>
+                    <% if(theme['disqus_username']) { %>
                     <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                         /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = "<%= config['disqus_username'] %>";
+                        var disqus_shortname = "<%= theme['disqus_username'] %>";
                         var disqus_identifier = "<%= page.permalink %>";
                         var disqus_url = "<%= page.permalink %>";
 
@@ -131,7 +131,7 @@ layout: layout
                     <!-- disqus 公共JS代码 end -->
                     <% } %>
 
-                    <% if(config['livere_uid']) { %>
+                    <% if(theme['livere_uid']) { %>
                     <!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                        (function(d, s) {
