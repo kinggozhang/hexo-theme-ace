@@ -60,31 +60,6 @@ layout: layout
 
                 <hr>
 
-                <% if(theme['duoshuo_share'] && theme['duoshuo_username']) { %>
-                <!-- 多说 Share start -->
-                </style>
-                <div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="<%= page.path %>"
-                    data-title="<%= page.title %>"
-                    data-url="<%= page.permalink %>"
-                    data-images="<%= config.url %><%= config.root %><%= page["header-img"] || theme["header-img"] %>"
-                    data-content="<%- truncate(strip_html(page.content), {length: 50, omission: '...'}) %> | <%= theme.SEOTitle %> " >
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-                <% } %>
-
                 <ul class="pager">
                     <% if (page.prev){ %>
                         <li class="previous">
@@ -98,17 +73,6 @@ layout: layout
                     <% } %>
                 </ul>
 
-                <% if(theme['duoshuo_username']) { %>
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="<%= page.path %>"
-                        data-title="<%= page.title %>"
-                        data-url="<%= page.permalink %>" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                <% } %>
 
                 <% if(theme['disqus_username']) { %>
                 <!-- disqus 评论框 start -->
@@ -155,25 +119,6 @@ layout: layout
     </div>
 </article>
 
-<% if(theme['duoshuo_username']) { %>
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User by Hux
-    var _user = '<%= theme['duoshuo_username'] %>';
-
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-<% } %>
 
 <% if(theme['disqus_username']) { %>
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
