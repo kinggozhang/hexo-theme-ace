@@ -33,13 +33,15 @@ cd your_blog_dir
 git clone https://github.com/kinggozhang/hexo-theme-ace.git themes/ace
 ```
 
-## Modify
+## Modify blog theme
 Change theme with 'ace'
 ```yml
 ## Themes: https://hexo.io/themes/
 theme: ace
 ```
-Modify `_config.yml` file with your own info.
+## Modify theme config
+
+Modify `themes/ace/_config.yml` file with your own info.
 Especially the section:
 ## header decoration
 ```yml
