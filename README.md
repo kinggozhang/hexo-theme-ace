@@ -22,10 +22,8 @@ leave friend link of  [ACE-THEME](http://www.sumoon.com/)
 
 ```shell
 npm install hexo-cli -g
-
-#For more: <https://hexo.io>
 ```
-
+Access <https://hexo.io> for more info
 # Theme Usage
 
 ## Init
@@ -37,16 +35,13 @@ git clone https://github.com/kinggozhang/hexo-theme-ace.git themes/ace
 
 ## Modify
 Change theme with 'ace'
+```yml
+## Themes: https://hexo.io/themes/
+theme: ace
+```
 Modify `_config.yml` file with your own info.
 Especially the section:
-### Deployment
-Replace to your own repo!
-```yml
-deploy:
-  type: git
-  repo: https://github.com/<yourAccount>/<repo>
-  branch: <your-branch>
-```
+
 
 ### Sidebar settings
 Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
