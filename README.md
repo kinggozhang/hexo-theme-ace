@@ -6,9 +6,7 @@
  3. Remove image bg of header
  4. Add ribbon/particle bg to header.
  5. Support sticky post.
- 
-#To DO
- 1. multi lang support
+ 6. multi lang support
  
 # Live Demo
 
@@ -22,20 +20,10 @@ leave friend link of  [ACE-THEME](http://www.sumoon.com/)
 
 # Install Hexo
 
-Install Node.js  and Git
-
-```shell
-#For Mac
-brew install node
-brew install git
-```
-
-Install hexo
-
 ```shell
 npm install hexo-cli -g
 
-#For more:https://hexo.io
+#For more: <https://hexo.io>
 ```
 
 # Theme Usage
