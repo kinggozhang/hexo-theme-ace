@@ -47,7 +47,12 @@ slideshow: true     //support 3 slides, img/slideshow/slider1/2/3
 ribban_bg: false    //A beatiful ribban bg
 particle_bg: true   //A dynamic particle bg
 ```
-
+## Sticky post
+ You have to specify a sticky tag, then tag it to post.
+```yml
+#sticky post tag
+sticky_tag: "Sticky"
+```
 ### Sidebar settings
 Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
 ```yml
