@@ -41,7 +41,12 @@ theme: ace
 ```
 Modify `_config.yml` file with your own info.
 Especially the section:
-
+## header decoration
+```yml
+slideshow: true     //support 3 slides, img/slideshow/slider1/2/3
+ribban_bg: false    //A beatiful ribban bg
+particle_bg: true   //A dynamic particle bg
+```
 
 ### Sidebar settings
 Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
