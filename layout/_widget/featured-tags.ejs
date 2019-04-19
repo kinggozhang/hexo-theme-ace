@@ -1,11 +1,11 @@
 <!-- Featured Tags -->
-<% if(config['featured-tags']) { %>
+<% if(theme['featured-tags']) { %>
 <section>
     <!-- no hr -->
     <h5><a href="<%= config.root %>tags/"><%= __('FEATURED TAGS') %></a></h5>
     <div class="tags">
         <% site.tags.map(function(tag){  %>
-            <% if(tag.length > config['featured-condition-size']) { %>
+            <% if(tag.length > theme['featured-condition-size']) { %>
             <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
             <% } %>
         <% }) %>

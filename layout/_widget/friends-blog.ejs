@@ -1,9 +1,9 @@
 <!-- Friends Blog -->
-<% if(config.friends) { %>
+<% if(theme.friends) { %>
 <h5><%= __('FRIENDS') %></h5>
 <ul class="list-inline">
 
-    <% config.friends.forEach(function(friend){ %>
+    <% theme.friends.forEach(function(friend){ %>
         <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>
     <% }); %>
 </ul>

@@ -16,7 +16,16 @@
   .person:hover {
     border-color: #f1f1f1;
   }
+<% if(theme.slideshow) { %> 
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+    }
 
+    .carousel-caption h3 {
+      color: #fff !important;
+    }
+<%}%>
 </style>
 
 <header id="headerid" class="w3-indigo intro-header" style="position:relative;">
@@ -58,26 +67,24 @@
 					  <div class="item active">
 						<img src="img/slideshow/slider1.jpg" alt="APP">
 						<div class="carousel-caption">
-						  <h3>New York</h3>
-						  <p>The atmosphere in New York is lorem ipsum.</p>
+						  <h3>Slider1</h3>
+						  <p>This description of s1.</p>
 						</div>      
 					  </div>
 
 					  <div class="item">
-						<div class="container">
 						<img src="img/slideshow/slider2.jpg" alt="website">
 						<div class="carousel-caption">
-						  <h3>Chicago</h3>
-						  <p>Thank you, Chicago - A night we won't forget.</p>
-						</div>
-						</div>		
+						  <h3>Slider2</h3>
+						  <p>This description of s2.</p>
+						</div>	
 					  </div>
 					
 					  <div class="item">
 						<img src="img/slideshow/slider3.jpg" alt="GZH">
 						<div class="carousel-caption">
-						  <h3>LA</h3>
-						  <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+						  <h3>Slider3</h3>
+						  <p>This description of s3.</p>
 						</div>      
 					  </div>
 					</div>
