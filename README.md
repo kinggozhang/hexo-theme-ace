@@ -122,7 +122,7 @@ hexo deploy # hexo will push the static files automatically into the specific br
 Please <a class="github-button" href="https://github.com/kinggozhang/hexo-theme-sumoon" data-icon="octicon-star" aria-label="Star kinggozhang/hexo-theme-sumoon on GitHub">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/kinggozhang" aria-label="Follow @kinggozhang on GitHub">Follow</a> would also be appreciated!
 Peace!
 # Thanks and references
- <https://github.com/huweihuang/hexo-theme-huweihuang>
- <https://github.com/YenYuHsuan/hexo-theme-beantech>
- <https://github.com/VincentGarreau/particles.js>
+ - <https://github.com/huweihuang/hexo-theme-huweihuang>
+ - <https://github.com/YenYuHsuan/hexo-theme-beantech>
+ - <https://github.com/VincentGarreau/particles.js>
  
