@@ -6,9 +6,7 @@
  3. Remove image bg of header
  4. Add ribbon/particle bg to header.
  5. Support sticky post.
- 
-#To DO
- 1. multi lang support
+ 6. multi lang support
  
 # Live Demo
 
@@ -22,22 +20,10 @@ leave friend link of  [ACE-THEME](http://www.sumoon.com/)
 
 # Install Hexo
 
-Install Node.js  and Git
-
-```shell
-#For Mac
-brew install node
-brew install git
-```
-
-Install hexo
-
 ```shell
 npm install hexo-cli -g
-
-#For more:https://hexo.io
 ```
-
+Access <https://hexo.io> for more info
 # Theme Usage
 
 ## Init
@@ -47,19 +33,28 @@ cd your_blog_dir
 git clone https://github.com/kinggozhang/hexo-theme-ace.git themes/ace
 ```
 
-## Modify
+## Modify blog theme
 Change theme with 'ace'
-Modify `_config.yml` file with your own info.
-Especially the section:
-### Deployment
-Replace to your own repo!
 ```yml
-deploy:
-  type: git
-  repo: https://github.com/<yourAccount>/<repo>
-  branch: <your-branch>
+## Themes: https://hexo.io/themes/
+theme: ace
 ```
+## Modify theme config
 
+Modify `themes/ace/_config.yml` file with your own info.
+Especially the section:
+## header decoration
+```yml
+slideshow: true     //support 3 slides, img/slideshow/slider1/2/3
+ribban_bg: false    //A beatiful ribban bg
+particle_bg: true   //A dynamic particle bg
+```
+## Sticky post
+ You have to specify a sticky tag, then tag it to post.
+```yml
+#sticky post tag
+sticky_tag: "Sticky"
+```
 ### Sidebar settings
 Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
 ```yml
@@ -129,7 +124,7 @@ hexo deploy # hexo will push the static files automatically into the specific br
 Please <a class="github-button" href="https://github.com/kinggozhang/hexo-theme-sumoon" data-icon="octicon-star" aria-label="Star kinggozhang/hexo-theme-sumoon on GitHub">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/kinggozhang" aria-label="Follow @kinggozhang on GitHub">Follow</a> would also be appreciated!
 Peace!
 # Thanks and references
- <https://github.com/huweihuang/hexo-theme-huweihuang>
- <https://github.com/YenYuHsuan/hexo-theme-beantech>
- <https://github.com/VincentGarreau/particles.js>
+ - <https://github.com/huweihuang/hexo-theme-huweihuang>
+ - <https://github.com/YenYuHsuan/hexo-theme-beantech>
+ - <https://github.com/VincentGarreau/particles.js>
  
