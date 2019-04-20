@@ -10,16 +10,10 @@ slideshow: true
 ribban_bg: false
 particle_bg: true
 
-# Site settings
-SEOTitle: 编程|HEXO|NODEJS|C++|碎碎念
-email: e-mail_address
-description: "字节艺术家的日常"
-keyword: ""
-
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
 sidebar-about-description: "INNOVATION IS KING!"
-sidebar-avatar: /img/avatar/ironman.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar/logo.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
 - short-about
@@ -32,11 +26,14 @@ widgets:
 archives-img: /img/header_img/archives-widget.jpg
 archive_type: 'monthly'
 show_count: true
+## Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 ## Friends
 friends: [
     {
-        title: "ACE theme for Hexo",
+        title: "ACE theme",
         href: "http://www.sumoon.com"
     }
 #    ,
