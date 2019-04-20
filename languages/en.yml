@@ -1,5 +1,18 @@
-prev: Older Posts
-next: Newer Posts
-comment: Comments
-archive_a: Archives
-archive_b: "Archives: %s"
+prev: Prev
+next: Next
+comment: Comment
+archive_a: archives
+archive_b: archives:%s
+website: Website
+Home: Homepage
+APP: APP
+FEATURED TAGS: Tags
+Previous Post: Previous post
+Next Post: Next post
+RECENT POSTS: Recent posts
+categories: Categories
+FRIENDS: Friends
+ARCHIVES: Achives
+ABOUT ME: About me
+dream: Dream
+coding: Coding
