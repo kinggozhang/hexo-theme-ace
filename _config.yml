@@ -38,11 +38,12 @@ friends: [
     {
         title: "ACE theme for Hexo",
         href: "http://www.sumoon.com"
-    },
-    {
-        title: "your friends blog",
-        href: "http://###.com"
     }
+#    ,
+#    {
+#        title: "your blog",
+#        href: "http://"
+#    }
 ]
 
 #sticky post tag
