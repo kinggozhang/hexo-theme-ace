@@ -1,5 +1,5 @@
-> This ACE theme created by [kinggozhang](http://www.sumoon.com/) based on theme:huweihuang (https://github.com/huweihuang/hexo-theme-huweihuang)
-> 
+> This [ACE theme](https://github.com/kinggozhang/hexo-theme-ace) created by kinggozhang based on theme:huweihuang and many other repos.
+> please check thanks and references for more details.
 # New feature
  1. Fancy nav bar
  2. Support slide show for index page.
