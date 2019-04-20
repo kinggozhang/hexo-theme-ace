@@ -13,12 +13,29 @@
 # Live Demo
 
 Live Demo : [www.sumoon.com](http://www.sumoon.com/)
-
-
+snapshots:
+![Particle bg](snapshots/snapshot_particle.png "snapshot_particle_bg")
+![Ribbon bg](snapshots/snapshot_ribbon_en.png "snapshot_ribbon_bg")
 # Copyright Notice
-You are free to use this theme, but please leave copyright info in footer.
-or
-leave friend link of  [ACE-THEME](http://www.sumoon.com/)
+You are free to use this theme, but please keep copyright info in footer.
+
+#Friend link
+you can manage your own friend links
+```yml
+friends: [
+    {
+        title: "ACE theme",
+        href: "http://www.sumoon.com"
+    },
+    {
+        title: "your friend link",
+        href: "https://##"
+    }
+]
+
+```
+If you would like add your blog into ACE theme
+please fork this project, and modify _config.yml, append your site into friends,and create pull request.
 
 # Install Hexo
 
