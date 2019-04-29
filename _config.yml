@@ -40,11 +40,12 @@ friends: [
     {
         title: "ACE theme",
         href: "http://www.sumoon.com"
-    },
-    {
-        title: "ACE theme github",
-        href: "https://github.com/kinggozhang/hexo-theme-ace"
     }
+#    ,
+#    {
+#        title: "your blog",
+#        href: "http://"
+#    }
 ]
 
 #sticky post tag
