@@ -19,7 +19,12 @@
     <link rel="canonical" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
 
     <!-- Bootstrap Core CSS -->
-    <%- css('css/bootstrap.min.css') %>
+<% if (theme['bootstrapCSS_CDN']) {%>
+   <%- js(theme['bootstrapCSS_CDN']) %>
+<% }else{ %>
+   <%- css('css/bootstrap.min.css') %>
+<% } %>
+    
 
     <!-- Custom CSS --> 
     <%- css('css/beantech.min.css')%>

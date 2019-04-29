@@ -6,9 +6,14 @@
 # night yilia - https://github.com/litten/hexo-theme-yilia
 highlight_theme: night eighties
 #header decoration
-slideshow: true 
+slideshow: false 
 ribban_bg: false
-particle_bg: true
+particle_bg: true 
+
+#CDN settings;
+bootstrapJS_CDN: https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js
+bootstrapCSS_CDN: https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css
+jquery_CDN: https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js
 
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.

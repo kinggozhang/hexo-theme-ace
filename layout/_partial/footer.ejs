@@ -100,10 +100,19 @@
 </footer>
 
 <!-- jQuery -->
-<%- js('js/jquery.min.js') %>
+<% if (theme['jquery_CDN']) {%>
+   <%- js(theme['jquery_CDN']) %>
+<% }else{ %>
+   <%- js('js/jquery.min.js') %>
+<% } %>
+
 
 <!-- Bootstrap Core JavaScript -->
-<%- js('js/bootstrap.min.js') %>
+<% if (theme['bootstrapJS_CDN']) {%>
+   <%- js(theme['bootstrapJS_CDN']) %>
+<% }else{ %>
+   <%- js('js/bootstrap.min.js') %>
+<% } %>
 
 <!-- Custom Theme JavaScript -->
 <%- js('js/hux-blog.min.js') %>
