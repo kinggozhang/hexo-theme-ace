@@ -7,7 +7,7 @@
  4. Add ribbon/particle bg to header.
  5. Support sticky post.
  6. multi lang support
- 
+ 7. support Valine comment system.
 # Live Demo
 
 Live Demo : [www.sumoon.com](http://www.sumoon.com/)
