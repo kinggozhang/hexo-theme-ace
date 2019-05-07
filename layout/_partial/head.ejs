@@ -61,7 +61,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	
+<% if (theme.enable_valine) {%>
+    <!-- not work in footer :(-->
+	<%- js('//cdn1.lncld.net/static/js/3.0.4/av-min.js') %>
+	<%- js('//unpkg.com/valine/dist/Valine.min.js') %>
+<% } %>
     <!-- ga & ba script hoook -->
     <script></script>
 </head>

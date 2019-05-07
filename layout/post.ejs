@@ -86,9 +86,19 @@ layout: layout
                     </div>
                     <!-- disqus 评论框 end -->
                 <% } %>
-
+				<% if(theme.enable_valine ) { %>
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: '<%= theme["leancloud_appid"] %>',
+							appKey: '<%= theme["leancloud_appkey"] %>'
+						})
+					</script>
+				<% } %>
             </div>
-            
+
             <!-- Tabe of Content -->
             <%- partial('_partial/toc') %>
                 

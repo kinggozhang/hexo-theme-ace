@@ -77,3 +77,8 @@ anchorjs: true                          # if you want to customize anchor. check
 # Disqus settings
 #disqus_username: your-disqus-ID
 
+# Valine settings 
+# Valine depends on leancloud, please signup leancloud to get appid/appkey. https://valine.js.org/quickstart.html
+enable_valine: true
+leancloud_appid: 
+leancloud_appkey: 
