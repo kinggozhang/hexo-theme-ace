@@ -79,6 +79,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Valine settings 
 # Valine depends on leancloud, please signup leancloud to get appid/appkey. https://valine.js.org/quickstart.html
-enable_valine: true
-leancloud_appid: 
-leancloud_appkey: 
+enable_valine: false 
+leancloud_appid: 'yourappid'
+leancloud_appkey: 'yourappkey'
+enable_leancounter: true

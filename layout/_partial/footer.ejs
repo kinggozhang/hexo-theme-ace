@@ -87,12 +87,17 @@
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
                     </span> 
-                    Theme by <a href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a> | 
+                    Theme by <a href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a> 
+					<% if (theme['show_theme_star']) {%>
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="91px" height="20px"
                         src="https://ghbtns.com/github-btn.html?user=kinggozhang&repo=hexo-theme-ace&type=star&count=true" >
                     </iframe>
+					<% } %>
+					<% if (theme['enable_leancounter']) {%>
+					<i class="fa fa-eye" id="leancounter"></i>
+					<% } %>
                 </p>
             </div>
         </div>
@@ -167,7 +172,59 @@
         })
     }
 </script>
+<% if (theme.enable_valine && theme.enable_leancounter) {%>
+<script>
 
+if(!AV.applicationId)
+{
+AV.init({
+  appId: '<%= theme["leancloud_appid"] %>',
+  appKey: '<%= theme["leancloud_appkey"] %>'
+});
+}
+function createNewCounter()
+{
+ // 声明一个 Counter 类型
+  var Counter = AV.Object.extend('Counter');
+  // 新建一个 Counter 对象
+  var counter = new Counter();
+  console.log(document.URL);
+  counter.set('title', document.URL);
+  counter.set('counter', 0);
+  counter.save().then(function (counter) {
+    // 成功保存之后，执行其他逻辑.
+    console.log('New object created with objectId: ' + counter.id);
+  }, function (error) {
+    // 异常处理
+    console.error('Failed to create new object, with error message: ' + error.message);
+  });
+}
+function showPageView()
+{
+  var query = new AV.Query('Counter');
+  query.equalTo('title', document.URL);
+  query.find().then(function (results) {
+      if(results.length > 0)
+	  {
+	  var cnt=results[0].get('counter');
+	  results[0].increment('counter');
+	  results[0].save().then(function (counter) {});
+	  document.getElementById('leancounter').innerHTML=''+(cnt+1);
+	  }
+	  else
+	  {
+	  createNewCounter();
+	   document.getElementById('leancounter').innerHTML=1;
+	  }
+  }, function (error) {
+      
+	 console.error('Failed to find object, with error message: ' + error.message);
+  });
+    
+}
+showPageView();
+</script>
+<% } %>
 <!--fastClick.js -->
 <script>
     async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
