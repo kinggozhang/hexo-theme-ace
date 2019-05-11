@@ -3,7 +3,7 @@ layout: page
 ---
 <!-- Main Content -->
 <% site.categories.map(function(cate){  if(cate.name == page.category){%>
-<% cate.posts.each(function(post){ %>
+<% cate.posts.sort('date').reverse().each(function(post){ %>
 <div class="post-preview">
 
     <a href="<%- config.root %><%- post.path %>">
