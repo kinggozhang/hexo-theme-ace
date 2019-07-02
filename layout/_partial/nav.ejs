@@ -25,11 +25,15 @@
                         <a  href="<%= config.root %>"><%= __('Home') %></a>
                     </li>
 
-                    <% site.pages.forEach(function(page){ %>
+                    <% site.pages.sort('menu').forEach(function(page){ %>
 
-                        <% if(page.menu && page.title){ %>
+                        <% if(page.menu > 0 && page.title){ %>
                         <li>
+                            <% if(page.menuUrl){ %>
+                            <a  href="<%= page.menuUrl %>"><%= __(page.title) %></a>
+                            <% }else {%>
                             <a  href="<%= config.root %><%= page.path.replace('index.html', '') %>"><%= __(page.title) %></a>
+                            <% } %>
                         </li>
                         <% } %>
                     <% }); %>
