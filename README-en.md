@@ -1,23 +1,24 @@
-> 开源HEXO主题，我命名为 [ACE](https://github.com/kinggozhang/hexo-theme-ace) 这是我第一个HEXO主题，他借鉴了很多其他开源主题的代码。
-> 具体请查看下面 感谢与引用
-# 特性列表
- 1. 好看的导航条
- 2. 支持首页滚动图片显示.
- 
- 4. 添加彩带、几何特效.
- 5. 支持文章置顶.
- 6. 多语言
- 7. 支持 Valine 评论系统.
-# 在线 Demo
+> This [ACE theme](https://github.com/kinggozhang/hexo-theme-ace) created by kinggozhang based on theme:huweihuang and many other repos.
+> please check thanks and references for more details.
+# New feature
+ 1. Fancy nav bar
+ 2. Support slide show for index page.
+ 3. Remove image bg of header
+ 4. Add ribbon/particle bg to header.
+ 5. Support sticky post.
+ 6. multi lang support
+ 7. support Valine comment system.
+# Live Demo
 
-在线 Demo : [www.sumoon.com](http://www.sumoon.com/)
-截图:
+Live Demo : [www.sumoon.com](http://www.sumoon.com/)
+snapshots:
 ![Particle bg](snapshots/snapshot_particle.png "snapshot_particle_bg")
 ![Ribbon bg](snapshots/snapshot_ribbon_en.png "snapshot_ribbon_bg")
-# 版权信息
-自由使用，欢迎加个友链 ^_^
-#友情链接管理
-管理你自己的友链
+# Copyright Notice
+You are free to use this theme, but please keep copyright info in footer.
+
+#Friend link
+you can manage your own friend links
 ```yml
 friends: [
     {
@@ -31,98 +32,79 @@ friends: [
 ]
 
 ```
-如果你想把自己站点加入 ACE theme
-请 fork 这个项目， 修改 _config.yml, 附加你的站点信息，然后提PR.
+If you would like add your blog into ACE theme
+please fork this project, and modify _config.yml, append your site into friends,and create pull request.
 
-# 安装 Hexo
+# Install Hexo
 
 ```shell
 npm install hexo-cli -g
 ```
 Access <https://hexo.io> for more info
-# 主题使用
+# Theme Usage
 
-## 下载ACE 主题
+## Init
 
 ```bash
 cd your_blog_dir
 git clone https://github.com/kinggozhang/hexo-theme-ace.git themes/ace
 ```
 
-## 修改你的主题
+## Modify blog theme
 Change theme with 'ace'
 ```yml
 ## Themes: https://hexo.io/themes/
 theme: ace
 ```
-## 修改主题配置
+## Modify theme config
 
-修改 `themes/ace/_config.yml`
-##各个属性介绍:
-
-### 头部修饰
+Modify `themes/ace/_config.yml` file with your own info.
+Especially the section:
+## header decoration
 ```yml
-slideshow: true     //首页三张幻灯图片, img/slideshow/slider1/2/3
-ribban_bg: false    //彩带北京
-particle_bg: true   //几何特效
+slideshow: true     //support 3 slides, img/slideshow/slider1/2/3
+ribban_bg: false    //A beatiful ribban bg
+particle_bg: true   //A dynamic particle bg
 ```
-以上三个属性，不要同时为true,可能会混乱。
-### 自定义菜单栏
-```yml
-hexo new page your_menu
-```
-然后 
-```yml
-cd source/your_menu
-vi index.md
-```
-添加两行属性到front-matter:
-```yml
-menu: 1
-menuUrl: https://www.baidu.com
-```
-menu的值越大，越靠前。
-menuUrl如果为空，将链接到当前目录url
-
-### 置顶
- 首先指定一个标签为置顶标签.然后所有具有该标签的帖子都会按顺序先显示。
+## Sticky post
+ You have to specify a sticky tag, then tag it to post.
 ```yml
 #sticky post tag
 sticky_tag: "Sticky"
 ```
-### 侧边栏
-复制你的头像到 `<root>/img/` 然后修改 `_config.yml`:
+### Sidebar settings
+Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
 ```yml
-sidebar: true    # 是否显示Sidebar.
-sidebar-about-description: "你的介绍"
-sidebar-avatar: img/<个人头像地址>
+sidebar: true    # whether or not using Sidebar.
+sidebar-about-description: "<your description>"
+sidebar-avatar: img/<your avatar path>
 ```
-### widget设置
+and activate your personal widget you like
 ```yml
 widgets:         # here are widget you can use, you can comment out
-- featured-tags   //标签云
-- short-about     //个人简介
-- recent-posts    //最近发表
-- friends-blog    //友链
-- archive         //归档
-- category        //目录
+- featured-tags
+- short-about
+- recent-posts
+- friends-blog
+- archive
+- category
 ```
-如果你想加入自己的widget, 代码在 `layout/_widget`.
-### 签名设置
-复制你的签名档到 `<root>/img/signature` 然后编辑 `_config.yml`:
+if you want to add sidebar widget, please add at `layout/_widget`.
+### Signature Setup
+Copy your signature image to `<root>/img/signature` and modify the `_config.yml`:
 ```yml
-signature: true   # 是否显示签名档
-signature-img: img/signature/签名档图片
+signature: true   # show signature
+signature-img: img/signature/<your-signature-ID>
 ```
-### 回到最上设置
-可以在`css/image`修改你想要的图片.
+### Go to top icon Setup
+you can change to your own icon at `css/image`.
 
-### 文章标签
-控制首页标签是否显示.
+### Post tag
+You can decide to show post tags or not.
 ```yml
 home_posts_tag: true
 ```
-### Markdown 渲染
+### Markdown render
 My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
 ```yml
 # Markdown-it config
