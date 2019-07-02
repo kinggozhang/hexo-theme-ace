@@ -1,5 +1,6 @@
 > 开源HEXO主题，我命名为 [ACE](https://github.com/kinggozhang/hexo-theme-ace) 这是我第一个HEXO主题，他借鉴了很多其他开源主题的代码。
-> 具体请查看下面 感谢与引用
+> 具体请查看下面 感谢与引用. 
+# [English](https://github.com/kinggozhang/hexo-theme-ace/README-en.md)
 # 特性列表
  1. 好看的导航条
  2. 支持首页滚动图片显示.
