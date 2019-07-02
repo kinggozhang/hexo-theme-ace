@@ -1,10 +1,10 @@
 > 开源HEXO主题，我命名为 [ACE](https://github.com/kinggozhang/hexo-theme-ace) 这是我第一个HEXO主题，他借鉴了很多其他开源主题的代码。
 > 具体请查看下面 感谢与引用. 
-# [English](https://github.com/kinggozhang/hexo-theme-ace/README-en.md)
+# [English Version](https://github.com/kinggozhang/hexo-theme-ace/README-en.md)
 # 特性列表
  1. 好看的导航条
- 2. 支持首页滚动图片显示.
- 
+ 2. 支持首页滚动图片显示. 
+ 3. 自定义菜单
  4. 添加彩带、几何特效.
  5. 支持文章置顶.
  6. 多语言
@@ -12,12 +12,13 @@
 # 在线 Demo
 
 在线 Demo : [www.sumoon.com](http://www.sumoon.com/)
+
 截图:
 ![Particle bg](snapshots/snapshot_particle.png "snapshot_particle_bg")
 ![Ribbon bg](snapshots/snapshot_ribbon_en.png "snapshot_ribbon_bg")
 # 版权信息
 自由使用，欢迎加个友链 ^_^
-#友情链接管理
+# 友情链接管理
 管理你自己的友链
 ```yml
 friends: [
@@ -59,7 +60,7 @@ theme: ace
 ## 修改主题配置
 
 修改 `themes/ace/_config.yml`
-##各个属性介绍:
+## 各个属性介绍:
 
 ### 头部修饰
 ```yml
@@ -147,7 +148,7 @@ async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         };
 ```
 
-## Hexo Basics
+## Hexo 基础
 Some hexo command:
 ```bash
 hexo new post "<post name>" # you can change post to another layout if you want
@@ -157,9 +158,9 @@ hexo deploy # hexo will push the static files automatically into the specific br
 ```
 
 # Have fun ^_^ 
-Please <a class="github-button" href="https://github.com/kinggozhang/hexo-theme-sumoon" data-icon="octicon-star" aria-label="Star kinggozhang/hexo-theme-sumoon on GitHub">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/kinggozhang" aria-label="Follow @kinggozhang on GitHub">Follow</a> would also be appreciated!
+请给个小星星 <a class="github-button" href="https://github.com/kinggozhang/hexo-theme-sumoon" data-icon="octicon-star" aria-label="Star kinggozhang/hexo-theme-sumoon on GitHub">Star</a>  <a class="github-button" href="https://github.com/kinggozhang" aria-label="Follow @kinggozhang on GitHub">Follow</a> 
 Peace!
-# Thanks and references
+# 感谢和引用
  - <https://github.com/huweihuang/hexo-theme-huweihuang>
  - <https://github.com/YenYuHsuan/hexo-theme-beantech>
  - <https://github.com/VincentGarreau/particles.js>
