@@ -24,7 +24,17 @@
                     <li>
                         <a  href="<%= config.root %>"><%= __('Home') %></a>
                     </li>
+		    
+                    <% if(theme.navmenu){ theme.navmenu.forEach(function(menu){ %>
 
+                        <% if( menu.title && menu.url){ %>
+                        <li>
+           
+                            <a  href="<%= menu.url %>"><%= __(menu.title) %></a>
+                           
+                        </li>
+                        <% } %>
+                    <% });}else { %>
                     <% site.pages.sort('menu').forEach(function(page){ %>
 
                         <% if(page.menu > 0 && page.title){ %>
@@ -36,7 +46,7 @@
                             <% } %>
                         </li>
                         <% } %>
-                    <% }); %>
+                    <% }); }%>
                     
                 </ul>
             </div>
