@@ -18,23 +18,6 @@
 ![Ribbon bg](snapshots/snapshot_ribbon_en.png "snapshot_ribbon_bg")
 # 版权信息
 自由使用，欢迎加个友链 ^_^
-# 友情链接管理
-管理你自己的友链
-```yml
-friends: [
-    {
-        title: "ACE theme",
-        href: "http://www.sumoon.com"
-    },
-    {
-        title: "your friend link",
-        href: "https://##"
-    }
-]
-
-```
-如果你想把自己站点加入 ACE theme
-请 fork 这个项目， 修改 _config.yml, 附加你的站点信息，然后提PR.
 
 # 安装 Hexo
 
@@ -61,6 +44,33 @@ theme: ace
 
 修改 `themes/ace/_config.yml`
 ## 各个属性介绍:
+### 导航菜单
+修改主题配置，支持二级菜单。
+
+```
+navmenu: [
+{
+   title: "menu1",
+   url: "#menu1",
+   children: [
+   {
+       title: "menu1-1",
+       url: "#menu1-1"
+   },
+   {
+       title: "menu1-2",
+       url: "#menu1-2"
+   }
+   ]   
+},
+{
+   title: "menu2",
+   url: "#menu2",        
+}
+]
+
+```
+> 修改layout/_partial/nav.ejs 可自定义。
 
 ### 头部修饰
 ```yml
@@ -110,6 +120,23 @@ widgets:         # here are widget you can use, you can comment out
 - category        //目录
 ```
 如果你想加入自己的widget, 代码在 `layout/_widget`.
+# 友情链接管理
+管理你自己的友链
+```yml
+friends: [
+    {
+        title: "ACE theme",
+        href: "http://www.sumoon.com"
+    },
+    {
+        title: "your friend link",
+        href: "https://##"
+    }
+]
+
+```
+如果你想把自己站点加入 ACE theme
+请 fork 这个项目， 修改 _config.yml, 附加你的站点信息，然后提PR.
 ### 签名设置
 复制你的签名档到 `<root>/img/signature` 然后编辑 `_config.yml`:
 ```yml
