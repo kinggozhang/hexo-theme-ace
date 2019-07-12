@@ -80,21 +80,7 @@ particle_bg: true   //几何特效
 ```
 以上三个属性，不要同时为true,可能会混乱。
 ### 自定义菜单栏
-```yml
-hexo new page your_menu
-```
-然后 
-```yml
-cd source/your_menu
-vi index.md
-```
-添加两行属性到front-matter:
-```yml
-menu: 1
-menuUrl: https://www.baidu.com
-```
-menu的值越大，越靠前。
-menuUrl如果为空，将链接到当前目录url
+请使用navmenu
 
 ### 置顶
  首先指定一个标签为置顶标签.然后所有具有该标签的帖子都会按顺序先显示。
