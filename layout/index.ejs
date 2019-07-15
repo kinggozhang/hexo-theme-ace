@@ -23,7 +23,7 @@ layout: page
         </p>
         <div class="tags">
             <% post.tags.forEach(function(tag){ %>
-              <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+              <a class="w3-aqua w3-hover-light-blue" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
             <% }) %>
         </div>
     <%} else {%>
