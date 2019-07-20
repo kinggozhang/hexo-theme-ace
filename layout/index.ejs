@@ -38,17 +38,31 @@ layout: page
 
 <% page.posts.each(function(post){ if(!post.isStiky){ %>
 
-<div class="post-preview">
-
-    <a href="<%- config.root %><%- post.path %>">
+<div class="w3-row-padding">
+	<a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "Untitled" %>
         </h2>
         <h3 class="post-subtitle">
             <%- post.subtitle || "" %>
         </h3>
+	</a>
+<div class="w3-quarter">	
+<% 
+let srcReg = /img\s+src=[\'\"]?([^\'\"]*)[\'\"]?/g;
+var imgArr = post.content.match(srcReg);
+if(imgArr && imgArr.length >0) {%>
+<a href="<%- config.root %><%- post.path %>"><<%- imgArr[0] %> style='width:100%'></a>
+<%} else {%>
+<a href="<%- config.root %><%- post.path %>"><img class="w3-image" src="img/small/default.jpg"></a>
+<%}%>
+</div>
+<div class="w3-threequarter">
+
+    <a href="<%- config.root %><%- post.path %>">
+
         <div class="post-content-preview">
-            <%- truncate(strip_html(post.content), {length: 200, omission: '...'}) %>...
+            <%- truncate(strip_html(post.content), {length: 200, omission: '......'}) %>...
         </div>
     </a>
     <% if (config.home_posts_tag){%>
@@ -58,7 +72,7 @@ layout: page
         </p>
         <div class="tags">
             <% post.tags.forEach(function(tag){ %>
-              <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+              <a class="w3-aqua w3-hover-light-blue" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
             <% }) %>
         </div>
     <%} else {%>
@@ -68,6 +82,7 @@ layout: page
         </p>
     <%}%>
 
+</div>
 </div>
 <hr>
 <% }}); %>
