@@ -60,7 +60,11 @@ layout: layout
                 post-container
             ">
             
-                <%- page.content || body %>
+	        <% if(page.content){ %>
+                <%- page.content %>
+            <%} else if(typeof body !== "undefined"){ %>
+                <%- body %>
+            <%}%>
 
 
 

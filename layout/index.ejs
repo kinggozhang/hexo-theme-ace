@@ -47,6 +47,7 @@ layout: page
             <%- post.subtitle || "" %>
         </h3>
 	</a>
+<% if(theme.image_portrait){ %>
 <div class="w3-quarter">	
 <% 
 let srcReg = /img\s+src=[\'\"]?([^\'\"]*)[\'\"]?/g;
@@ -58,7 +59,9 @@ if(imgArr && imgArr.length >0) {%>
 <%}%>
 </div>
 <div class="w3-threequarter">
-
+<%} else {%>
+<div>
+<%}%>
     <a href="<%- config.root %><%- post.path %>">
 
         <div class="post-content-preview">
